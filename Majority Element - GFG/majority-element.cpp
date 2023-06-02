@@ -15,22 +15,22 @@ class Solution{
     // size: size of input array
     int majorityElement(int a[], int size)
     {
-        int ele = a[0] ;
+        int candidateEle = a[0] ;
         int count = 1 ;
         for(int i = 1 ; i < size; i++){
             if(count == 0){
-                ele = a[i] ;
+                candidateEle = a[i] ;
                 count++; 
             }
-            else if(ele == a[i]){
+            else if(candidateEle == a[i]){
                 count++ ;
             }
-            else if(ele != a[i])count--;
+            else if(candidateEle != a[i])count--;
         }
-        int c = 0 ;
+        int countCandidate = 0 ;
         for(int i = 0 ; i < size; i++){
-            if(a[i] == ele)c++;
-            if(c > size/2)return ele;
+            if(a[i] == candidateEle)countCandidate++;
+            if(countCandidate > size/2)return candidateEle;
         }
         return -1 ;
     }
