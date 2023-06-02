@@ -16,7 +16,7 @@ class Solution{
     }
     int find_height(int arr[], int n, int k)
     {
-        sort(arr, arr + n);
+        //sort(arr, arr + n);
         int low = 0 ;
         int high = 1e9 ;
         while(low <= high){
